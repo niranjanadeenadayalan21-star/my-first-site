@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Friday Night Poll</title>
+  <title>Friday Night Showdown</title>
   <style>
     body { font-family: system-ui, sans-serif; background: #f4f1ff; display: flex; justify-content: center; padding: 40px 16px; margin: 0; }
     .card { background: #fff; max-width: 420px; width: 100%; padding: 28px; border-radius: 16px; box-shadow: 0 6px 24px rgba(0,0,0,.08); }
-    h1 { font-size: 1.4rem; margin-top: 0; }
+    .badge { display: inline-block; background: #ece6ff; color: #5b3fd6; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+    h1 { font-size: 1.8rem; margin: 12px 0 4px; }
+    .question { color: #555; margin: 0 0 20px; }
     label { display: block; padding: 12px 14px; margin: 10px 0; border: 2px solid #e3dcff; border-radius: 10px; cursor: pointer; }
     label:hover { border-color: #7c5cff; }
     input[type=text] { width: 100%; padding: 10px; border: 2px solid #e3dcff; border-radius: 10px; box-sizing: border-box; margin-bottom: 14px; }
@@ -16,14 +18,16 @@
 </head>
 <body>
   <div class="card">
-    <h1>What should we do this Friday night?</h1>
-    <form name="friday-poll" method="POST" data-netlify="true">
+    <span class="badge">Friends Poll</span>
+    <h1>Friday Night Showdown</h1>
+    <p class="question">What should we do this Friday night?</p>
+    <form name="friday-night-showdown" method="POST" data-netlify="true">
       <input type="text" name="name" placeholder="Your name" required>
       <label><input type="radio" name="vote" value="Movie night" required> 🎬 Movie night</label>
       <label><input type="radio" name="vote" value="Board games"> 🎲 Board games</label>
       <label><input type="radio" name="vote" value="Dinner out"> 🍜 Dinner out</label>
       <label><input type="radio" name="vote" value="Karaoke"> 🎤 Karaoke</label>
-      <button type="submit">Vote</button>
+      <button type="submit">Cast my vote</button>
     </form>
   </div>
 </body>
