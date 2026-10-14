@@ -3,10 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Site</title>
+  <title>Friday Night Poll</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #f4f1ff; display: flex; justify-content: center; padding: 40px 16px; margin: 0; }
+    .card { background: #fff; max-width: 420px; width: 100%; padding: 28px; border-radius: 16px; box-shadow: 0 6px 24px rgba(0,0,0,.08); }
+    h1 { font-size: 1.4rem; margin-top: 0; }
+    label { display: block; padding: 12px 14px; margin: 10px 0; border: 2px solid #e3dcff; border-radius: 10px; cursor: pointer; }
+    label:hover { border-color: #7c5cff; }
+    input[type=text] { width: 100%; padding: 10px; border: 2px solid #e3dcff; border-radius: 10px; box-sizing: border-box; margin-bottom: 14px; }
+    button { width: 100%; padding: 12px; background: #7c5cff; color: #fff; border: 0; border-radius: 10px; font-size: 1rem; cursor: pointer; }
+  </style>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <p>My first deployed page.</p>
+  <div class="card">
+    <h1>What should we do this Friday night?</h1>
+    <form name="friday-poll" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your name" required>
+      <label><input type="radio" name="vote" value="Movie night" required> 🎬 Movie night</label>
+      <label><input type="radio" name="vote" value="Board games"> 🎲 Board games</label>
+      <label><input type="radio" name="vote" value="Dinner out"> 🍜 Dinner out</label>
+      <label><input type="radio" name="vote" value="Karaoke"> 🎤 Karaoke</label>
+      <button type="submit">Vote</button>
+    </form>
+  </div>
 </body>
 </html>
